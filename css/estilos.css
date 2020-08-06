@@ -22,23 +22,40 @@ a {
 	color:inherit;
 }
 
+#menu {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
  #menu li {
     display: inline;
-    background-color: black;
-
     }
 
  #menu li a {
     font-family:Stalinist One, cursive;
     color:#E30052;
     font-size: 15px;
-    margin: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
     }
 
- #menu li a:hover {
+.Biografia, .Discografia, .Conciertos {
+    border-left-style: solid;
+    border-left-color: white;
+    border-left-width: 1px;
     
- }
+}
 
+.UltimasNoticias {
+	border-style: double;
+	border-color: white;
+	border-width: 1px;
+}
+
+ #menu li a:hover {
+    background-color: white;
+    text-decoration: none;
+ }
 
  .ImagenesCarousel {
  	width: 100%;
@@ -90,19 +107,6 @@ a {
 	color:inherit;
 }
 
-.titulos {
-	font-family:Stalinist One, cursive;
-	color:black;
-	background-color:#E30052 ;
-	font-size:3rem;
-    text-align:center;
-    align-self: center;
-    border-style: double;
-	border-color: black;
-	margin-bottom: 20px;
-
-}
-
 .subtitulos {
 	font-family: 'Teko', sans-serif;
 	font-size:5rem;
@@ -122,8 +126,6 @@ a {
 	border-color: white;
 	background: black;
 }
-
-
 
 .albums {
 	color:#F5093C;
@@ -182,14 +184,16 @@ p {
 }
 
 .ContenedorConciertos {
+
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: center; 
+	align-items: center;
+
 }
 
-.Conciertos {
+.ConciertosLista {
 	margin: 10px;
 	font-family:Stalinist One, cursive;
 	color:white;
@@ -265,6 +269,7 @@ ul li {
 
 #fondodegradado {
 	background: radial-gradient(#FF33A5, #7A05E0, black, black);
+	background-repeat: no-repeat;
 }
 
 .botones {
@@ -397,6 +402,7 @@ a.active,a:hover{
     display: block;
     margin-right: 40px;
   }
+
   ul{
     position: fixed;
     width: 100%;
@@ -415,7 +421,7 @@ a.active,a:hover{
   }
   nav ul li a{
     font-size: 20px;
-    display: block;
+    display: inline;
       }
 
   #check:checked ~ ul{
@@ -455,15 +461,17 @@ font-size: 2rem;
 }
 
 
-
-
 .texto {
     color: #ffffff;
     background:#000000;
-    font-size:50px;
+    font-size:40px;
     font-weight: bold;
     font-family: Stalinist One, cursive;
     text-transform: uppercase;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+   
 }
 .texto::before {
     content: 'Lady Gaga';
@@ -478,7 +486,7 @@ font-size: 2rem;
   
 }
 .gradient{
-    background: linear-gradient(114.5793141156962deg, rgba(6, 227, 250,1) 4.927083333333334%,rgba(229, 151, 64,1) 97.84374999999999%);
+    background: linear-gradient(#7A05E0 ,#E30052, #FF33A5);
     position: absolute;
     top: 0;
     left:0;
