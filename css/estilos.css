@@ -7,20 +7,18 @@ html {
 	font-size:62.5%;
 }
 
-.TituloPrincipal {
-	font-family:Stalinist One, cursive;
-	font-size: 4rem;
-	text-align: center;
-	margin-top: 10px;
-	color: #7A05E0;
-	-webkit-text-fill-color:#7A05E0;
-    -webkit-text-stroke: 1px black;
+#fondodegradado {
+	background: radial-gradient(#FF33A5, #7A05E0, black, black);
+	background-repeat: no-repeat;
 }
 	
 a {
 	text-decoration:none;
 	color:inherit;
 }
+
+
+/* Menu */
 
 #menu {
 	margin-top: 5px;
@@ -29,7 +27,7 @@ a {
 
  #menu li {
     display: inline;
-    }
+}
 
  #menu li a {
     font-family:Stalinist One, cursive;
@@ -37,13 +35,12 @@ a {
     font-size: 15px;
     margin-right: 10px;
     margin-left: 10px;
-    }
+}
 
 .Biografia, .Discografia, .Conciertos {
     border-left-style: solid;
     border-left-color: white;
     border-left-width: 1px;
-    
 }
 
 .UltimasNoticias {
@@ -53,9 +50,11 @@ a {
 }
 
  #menu li a:hover {
-    background-color: white;
+    color: white;
     text-decoration: none;
  }
+
+
 
  .ImagenesCarousel {
  	width: 100%;
@@ -85,27 +84,6 @@ a {
 	border-style: double;
 }
 
-#footer {
-	font-family:Stalinist One, cursive;
-	font-size:1.5rem;
-	background-color:#E30052; 
-	text-align: center;
-	border-style: double;
-	border-color: black;
-	margin-top: 20px;
-}
-
-#footer li {
-	display: inline;
-	border-right-style: double;
-
-}
-
-#footer li a:hover {
-	background-color:white; 
-	text-decoration:none;
-	color:inherit;
-}
 
 .subtitulos {
 	font-family: 'Teko', sans-serif;
@@ -114,6 +92,8 @@ a {
 	text-align: left;
 	padding-left:2rem;
 	margin-bottom: 5px;
+	margin-left: 20px;
+	margin-top: 20px;
 }
 
 .letrachica {
@@ -124,7 +104,10 @@ a {
 	padding: 2rem;
 	border-style: double;
 	border-color: white;
-	background: black;
+    background-color:rgba(0,0,0,1);
+	margin-left: 30px;
+	margin-right: 30px;
+}
 }
 
 .albums {
@@ -221,7 +204,6 @@ ul li {
 .columna {
 	margin: 10px;
 	box-shadow: -28px -22px 27px 0px rgba(0,0,0,0.75);
-
 }
 
 .albums .ContenedorAlbums {
@@ -267,10 +249,7 @@ ul li {
 	}
 }
 
-#fondodegradado {
-	background: radial-gradient(#FF33A5, #7A05E0, black, black);
-	background-repeat: no-repeat;
-}
+
 
 .botones {
 	font-family: 'Teko', sans-serif;
@@ -288,6 +267,8 @@ ul li {
 	color:#FF33A5;
 	box-shadow: 0 0 10px #7A05E0;
 }
+
+/*Discografia*/
 
 .hovereffect {
 overflow:hidden;
@@ -318,10 +299,26 @@ text-transform:uppercase;
 color:#fff;
 text-align:center;
 position:relative;
-font-size:17px;
+font-size:25px;
+font-family: 'Teko', sans-serif;
+border-style: double;
+border-color: white;
 background:rgba(0,0,0,0.6);
 padding:10px;
 }
+
+.hovereffect h3 {
+color:white;
+text-align:center;
+text-align: justify;
+position:relative;
+font-size:13px;
+font-family: 'Montserrat', sans-serif;
+background:rgba(0,0,0,0.6);
+padding:10px;
+margin: 10px;
+}
+
 
 .hovereffect:hover img {
 transform:scale(1.2);
@@ -335,14 +332,6 @@ opacity:1;
 opacity:1;
 transform:translatey(0);
 }
-
-.NombreDelAlbum {
-	font-family: 'Teko', sans-serif;
-	font-size:2rem;
-	border-style: double;
-	border-color: white;
-}
-
 
 .navbar {
       margin-bottom: 0;
@@ -391,6 +380,7 @@ a.active,a:hover{
 #check{
   display: none;
 }
+
 @media (max-width: 1270px){
   label.logo{
     font-size: 27px;
@@ -402,7 +392,7 @@ a.active,a:hover{
     display: block;
     margin-right: 40px;
   }
-
+  
   ul{
     position: fixed;
     width: 100%;
@@ -421,22 +411,13 @@ a.active,a:hover{
   }
   nav ul li a{
     font-size: 20px;
-    display: inline;
+    display: block;
       }
 
   #check:checked ~ ul{
     left: 0;
   }
 
-  #footer {
-  	font-family:Stalinist One, cursive;
-	font-size:5px;
-	background-color:#E30052; 
-	text-align: center;
-	border-style: double;
-	border-color: black;
-	margin-top: 20px;
-  }
 
 .titulos5 {
 	font-size: 2.5rem;
@@ -460,7 +441,7 @@ font-size: 2rem;
 
 }
 
-
+/* Titulo principal */
 .texto {
     color: #ffffff;
     background:#000000;
@@ -509,6 +490,114 @@ font-size: 2rem;
         transform: translate(50%,50%);
     }
 }
- 
 
 
+/* Footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height:800px){
+  footer { position: static; }
+}
+
+
+.footer{
+  background-color: #262626;
+  box-sizing: border-box;
+  width: 100%;
+
+  text-align: center;
+  padding: 50px 50px 60px 50px;
+  margin-top: 10px;
+}
+
+.TextoFooter {
+	font-family: Stalinist One, cursive;
+	color:white;
+	font-size: 15px;
+
+}
+
+
+.footer {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer .footer-icons{
+  margin-top: 25px;
+}
+
+.footer .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Responsive Footer */
+
+@media (max-width: 880px) {
+
+  .footer {
+  
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+
+}
+
+
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin:20px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
