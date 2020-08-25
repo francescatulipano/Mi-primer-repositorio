@@ -17,8 +17,24 @@ a {
 	color:inherit;
 }
 
+ul li {
+	list-style:none;
+}
+
+
 
 /* Menu */
+
+/* Titulo principal */
+
+.TituloPrincipal {
+margin-left: 10px;
+margin-top: 20px;
+}
+
+#menu1 {
+	box-shadow: -28px -22px 27px 0px white;
+}
 
 #menu {
 	margin-top: 5px;
@@ -34,19 +50,9 @@ a {
     color:#E30052;
     font-size: 15px;
     margin-right: 10px;
-    margin-left: 10px;
-}
-
-.Biografia, .Discografia, .Conciertos {
-    border-left-style: solid;
-    border-left-color: white;
-    border-left-width: 1px;
-}
-
-.UltimasNoticias {
-	border-style: double;
-	border-color: white;
-	border-width: 1px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    -webkit-text-stroke: 0.5px #7A05E0;
 }
 
  #menu li a:hover {
@@ -64,7 +70,7 @@ a {
  	font-family:Stalinist One, cursive;
     text-align: center;
     color:#7A05E0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     background-color:black;
     border-style: double;
     -webkit-text-fill-color:white;
@@ -77,7 +83,7 @@ a {
 
 .titulos5 {
  	font-family:Stalinist One, cursive;
-	font-size: 5rem;
+	font-size: 2rem;
 	text-align: center;
 	color: white;
 	background-color:black;
@@ -85,30 +91,63 @@ a {
 }
 
 
+/* Biografia */
+
 .subtitulos {
 	font-family: 'Teko', sans-serif;
-	font-size:5rem;
-	color:white;
+	font-size:35px;
+	color: #7A05E0;
 	text-align: left;
-	padding-left:2rem;
-	margin-bottom: 5px;
-	margin-left: 20px;
-	margin-top: 20px;
-}
+	}
 
 .letrachica {
 	font-family: 'Montserrat', sans-serif;
 	font-size:15px;
 	text-align: justify;
 	color: white;
-	padding: 2rem;
-	border-style: double;
-	border-color: white;
-    background-color:rgba(0,0,0,1);
-	margin-left: 30px;
-	margin-right: 30px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+    background-color: rgba(0,0,0,0.75);
+	margin: 20px;
+	
 }
+
+/* Imagenes Biografia */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin:20px;
 }
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
 
 .albums {
 	color:#F5093C;
@@ -187,9 +226,7 @@ p {
 	height: 40%;
 }
 
-ul li {
-	list-style:none;
-}
+
 
 .ContenedorAlbums {
 	width: 100%;
@@ -250,23 +287,6 @@ ul li {
 }
 
 
-
-.botones {
-	font-family: 'Teko', sans-serif;
-    text-align: center;
-    font-size: 2.5rem;
-    color:white;
-    background-color:black;
-    position:relative;
-    display: inline-block;
-    width: 100px;
-}
-
-.botones:hover {
-	background: #7A05E0
-	color:#FF33A5;
-	box-shadow: 0 0 10px #7A05E0;
-}
 
 /*Discografia*/
 
@@ -381,6 +401,20 @@ a.active,a:hover{
   display: none;
 }
 
+div::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+div::-webkit-scrollbar-thumb {
+  background-color: black;
+  outline: 1px solid black;
+}
+
+
 @media (max-width: 1270px){
   label.logo{
     font-size: 27px;
@@ -390,41 +424,43 @@ a.active,a:hover{
 
   .checkbtn{
     display: block;
-    margin-right: 40px;
+    margin-right: 10px;
   }
   
   ul{
     position: fixed;
     width: 100%;
-    height: 100vh;
-    
     left: -100%;
     text-align: center;
     transition: all .5s;
     display: block;
+ background-color: black;
+
   }
   nav ul li{
     display: block;
-    margin: 50px 0;
+    margin:0;
     line-height: 30px;
      position: relative;
   }
   nav ul li a{
     font-size: 20px;
     display: block;
+
       }
 
   #check:checked ~ ul{
     left: 0;
+    margin-top: 10px;
   }
 
 
 .titulos5 {
-	font-size: 2.5rem;
+	font-size: 10px;
 }
 
 .subtitulos3 {
-font-size: 2rem;
+font-size: 10px;
 }
 
 .letrachica {
@@ -435,61 +471,8 @@ font-size: 2rem;
 	font-size:4rem;
 }
 
-.texto {
-    font-size:1px;
 }
 
-}
-
-/* Titulo principal */
-.texto {
-    color: #ffffff;
-    background:#000000;
-    font-size:40px;
-    font-weight: bold;
-    font-family: Stalinist One, cursive;
-    text-transform: uppercase;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 5px;
-   
-}
-.texto::before {
-    content: 'Lady Gaga';
-    position: absolute;
-    mix-blend-mode: difference;
-    filter: blur(3px);
-}
-.neon-wrapper {
-    display:inline-flex;
-    filter: brightness(200%);
-    overflow: hidden;
-  
-}
-.gradient{
-    background: linear-gradient(#7A05E0 ,#E30052, #FF33A5);
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height:100%;
-    mix-blend-mode: multiply;
-}
-.dodge {
-    background: radial-gradient(circle,white,black 35%) center / 25% 25%;
-    position: absolute;
-    top:-100%;
-    left:-100%;
-    right:0;
-    bottom:0;
-    mix-blend-mode: color-dodge;
-    animation: dodge-area 3s linear infinite;
-}
-@keyframes dodge-area {
-    to {
-        transform: translate(50%,50%);
-    }
-}
 
 
 /* Footer */
@@ -505,19 +488,19 @@ footer {
 
 
 .footer{
-  background-color: #262626;
+  background-color: rgba(0,0,0,0.75);
   box-sizing: border-box;
   width: 100%;
 
   text-align: center;
-  padding: 50px 50px 60px 50px;
+  padding: 20px 20px 20px 20px;
   margin-top: 10px;
 }
 
 .TextoFooter {
 	font-family: Stalinist One, cursive;
 	color:white;
-	font-size: 15px;
+	font-size: 12px;
 
 }
 
@@ -536,7 +519,7 @@ footer {
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color:  #33383b;
+  background-color: rgba(0,0,0,0.75);
   border-radius: 2px;
 
   font-size: 20px;
@@ -548,15 +531,13 @@ footer {
   margin-bottom: 5px;
 }
 
-/* Responsive Footer */
-
 @media (max-width: 880px) {
 
   .footer {
   
     display: block;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
   }
 
@@ -568,36 +549,190 @@ footer {
 
 
 
+/* Ultimas Noticias */
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin:20px;
+.text-pink {
+    color: #FF33A5 !important; 
 }
 
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+.news-feed-heading {
+    font-size: 2.5rem !important;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
+.news-heading-intro {
+    font-size: 1.25rem!important;
 }
 
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+.text-black {
+  color: white !important;
+}
+
+.fullbar-item:hover {
+  background: rgba(0,0,0,0.75);
+}
+
+@media screen and (max-width: 768px) {
+  .in-news {
+    font-size: 1.5rem !important;    
+  }
+
+  .news-feed-heading {
+    font-size: 1.75rem !important; 
+  }
+
+  .feed-item-heading {
+    font-size: 1.25rem !important;
+  }
+
+  .news-heading-intro {
+    font-size: 1rem !important;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+
+
+/* Formulario */
+
+.form{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    box-shadow: -28px -22px 27px 0px rgba(0,0,0,0.75);
+
 }
+
+.newsletter-container{
+    background-color: #f1f1f1;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.picture{
+    width: 50%;
+    background: url(../multimedia/ladygagasuscribite.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.newsletter{
+   width: 50%;
+   padding: 200px 8%; 
+}
+
+.newsletter h1{
+    margin-bottom: 20px;
+    color: #7A05E0;
+    -webkit-text-stroke: 0.5px black;
+    font-weight: 900;
+	font-family: 'Teko', sans-serif;
+	font-size:5rem;
+	}
+
+.newsletter p{
+    margin-bottom: 40px;
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    color: rgba(0,0,0,0.75);
+    -webkit-text-stroke: 0.5px #7A05E0;
+}
+
+.newsletter-form{
+    height: 68px;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 3px;
+    display: flex;
+    padding: 8px 0;
+}
+
+.emailInput,.btn{
+    background: none;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    transition: .2s linear;
+}
+
+.emailInput{
+    width: calc(100% - 120px);
+    padding: 20px;
+    color: #f1f1f1;
+}
+
+.emailInput::placeholder{
+    color: white;
+}
+
+.emailInput:focus{
+    padding-left: 30px;
+}
+
+.btn{
+    width: 120px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    color: #FF33A5;
+    -webkit-text-stroke: 0.5px black;
+    cursor: pointer;
+    border-left: 1px solid white;
+}
+
+.btn:hover{
+    color: #f1f1f1;
+}
+
+@media screen and (max-width:900px){
+    .picture{
+        width: 100%;
+        height: 360px;
+    }
+    .newsletter{
+        width: 100%;
+        padding: 100px 20%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .newsletter{
+        padding: 100px 30px;
+    }
+}
+
+
+
+
+
+
+
+html { font-size: 22px; }
+body { padding: 1rem; }
+
+.card {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  height: 4rem;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+

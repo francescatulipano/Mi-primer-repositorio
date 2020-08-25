@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/estilos.css" type="text/css">
+  <style type="text/css"> 
+#capa1{ position:absolute; z-index:1; background-color:#FFFFFF; }
+#capa2{ position:absolute; z-index:0; } 
+</style>
   <link href ="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js">
   </script>
@@ -21,20 +25,15 @@
 
   <header>
 
-<nav>
-      <input type="checkbox" id="check">
+<nav id="menu1">
+
+  <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      
    
-        <div class="neon-wrapper">
-            <span class="texto" >Lady Gaga</span>
-            <span class="gradient"></span>
-            <span class="dodge"></span>
-        </div>
 
-
+<a href="index.html"><img class="TituloPrincipal" src="../multimedia/ladygagalogo.png" alt="">
 
       <ul id="menu">
           <li class="Home"><a class="active" href="index.html">Home</a></li>
@@ -48,9 +47,9 @@
       </header>
       
       
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel capa2" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+  <ol class="carousel-indicators" id="capa2">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -60,14 +59,14 @@
   <div class="carousel-inner">
     <div class="item active">
       <img class="ImagenesCarousel" src="../multimedia/ladygagaindex1.png" alt="">
-      <div class="carousel-caption">
+      <div class="carousel-caption" id="capa2">
         <h3 class="titulos5">¡Bienvenidos!</h3>
      </div>
     </div>
 
     <div class="item">
       <img class="ImagenesCarousel" src="../multimedia/ladygagaindex2.png" alt="">
-      <div class="carousel-caption">
+      <div class="carousel-caption" id="capa2">
         <h3><a class="subtitulos3" href="https://www.youtube.com/playlist?list=PLf5BnbCRqFj4pAtY6js7756YcTka4-Y3w">Escuchar ahora</a></h3>
       </div>
     </div>
@@ -87,13 +86,19 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-        
 </div>
+
+<a href="https://open.spotify.com/playlist/37i9dQZF1DXaB4n0u69YR3"><img class="ImagenesCarousel" src="../multimedia/chromaticatracklist.jpg" alt="">
+
+<a href="https://www.hauslabs.com/"><img class="ImagenesCarousel" src="../multimedia/hauslaboratories.jpg" alt="">
+
+<a href="https://www.youtube.com/watch?v=5L6xyaeiV58"><img class="ImagenesCarousel" src="../multimedia/stupidlove.png" alt="">
+
+<a href="https://www.youtube.com/watch?v=AoAm4om0wTs"><img class="ImagenesCarousel" src="../multimedia/rainonme2.jpg" alt="">
 
 
 
 <footer class="footer">
-  
         <div>
           <p class="TextoFooter">¡Seguila en las redes!</p>
         </div>
